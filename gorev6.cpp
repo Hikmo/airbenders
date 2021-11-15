@@ -22,7 +22,7 @@ class RegularPolygon{
         void decreaseCount(){
             count--;
         }
-        static int getCount(){
+        int getCount(){
             return count;
         }
     RegularPolygon(int sides){
