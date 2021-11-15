@@ -18,6 +18,6 @@ vector<vector<T>> createMatrix(T content, int y, int x){
 int main(){
     string content;
     cin >> content;
-    vector matrix = createMatrix(content,2,3);
+    auto matrix = createMatrix(content,2,3);
     return 0;
 }
