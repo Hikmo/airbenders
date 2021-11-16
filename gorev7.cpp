@@ -16,12 +16,19 @@ int main(int argc, char* argv[]){
        }
        matrix.push_back(v1);
     }
-    
-    string lineStr = "";
-    for(float x : matrix[0]){
-        lineStr += to_string(x * coefficient) + " ";
+    int y = 0;
+    for(vector<float> v1 : matrix){
+        for(float x : v1){
+            if(y == 0){
+                cout << x*coefficient << " ";
+            }
+            else{
+                cout << x << " ";
+            }   
+        }
+        y++;
+        cout << endl;
     }
-    cout << lineStr << endl;
 
     return 0;
 }
