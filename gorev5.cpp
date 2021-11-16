@@ -14,10 +14,10 @@ int main(){
         exit(1);
     }
 
-    string item;
+    int item;
     int count = 0;
-    vector<string> v1;
-    vector<vector<string>> matrix;
+    vector<int> v1;
+    vector<vector<int>> matrix;
 
     while(!inFile.eof()){
         inFile >> item;
@@ -28,7 +28,7 @@ int main(){
     inFile.open("A.txt");
     int i = 0;
     for(int i = 0; i < count; i++){
-        vector<string> v2;
+        vector<int> v2;
         for(int j = 0; j < count; j++){
             inFile >> item;
             v2.push_back(item);
@@ -36,16 +36,15 @@ int main(){
         matrix.push_back(v2);
     }
 
-    for(string item : v1){
+    for(int item : v1){
         cout << item << endl;
     }
 
     for(int i = 0; i < count; i ++){
-        string line = "";
         for(int j=0; j < count; j++){
-            line += matrix[i][j] + " ";
+            cout << matrix[i][j] << " ";
         }
-        cout << line << endl;
+        cout << endl;
     }
 
     return 0;
